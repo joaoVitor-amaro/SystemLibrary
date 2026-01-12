@@ -1,0 +1,53 @@
+<aside class="d-flex flex-column flex-shrink-0 p-3 bg-dark altura-maxima width-sidebar">
+    <div class="d-flex text-white">
+        <img src="assets/images/icon.png" alt="Photo" class="rounded-circle me-2 width-circle">
+        <span class="fs-4" id="nameBibliotecario">
+            {{bibliotecario?.nome}}
+        </span>
+    </div>
+
+    <nav class="mb-auto">
+        <ul class="nav nav-pills flex-column">
+            <li>
+                <a routerLink="/home-bibliotecario"
+                   (click)="setActive(0)"
+                   [class.active]="activeIndex === 0"
+                   class="nav-link text-white">
+                    Circulação
+                </a>
+            </li>
+            <li>
+                <a href="#" class="nav-link text-white">        
+                    Empréstimos
+                </a>
+            </li>
+            <li>
+                <a href="#" class="nav-link text-white" >   
+                    Cadastrar Aluno
+                </a>
+            </li>
+            <li>
+                <a href="#" class="nav-link text-white"> 
+                    Cadastrar Livro
+                </a>
+            </li>
+            <li>
+                <a href="#" class="nav-link text-white ">
+                    
+                    Cadastrar Editora
+                </a>
+            </li>
+            <li>
+                <a href="#" class="nav-link text-white">
+                    
+                    Meus dados
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <footer class="dropdown d-flex">
+        <img src="assets/images/sair3.png" alt="sair" width="40" height="40" class="rounded-circle img-color" (click)="logout()" style="cursor: pointer">
+        <span class= "link-right" style="color: white; text-decoration: none; cursor: pointer" (click)="logout()">Sair</span>
+    </footer>
+</aside>

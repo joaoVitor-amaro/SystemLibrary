@@ -1,0 +1,41 @@
+
+.altura-maxima {
+    height: 100%;
+}
+
+.mb-auto{
+    margin-top: 25px;
+}
+
+.nav-pills .nav-link {
+    border-radius: 0.25rem;
+    font-size: 21px;
+}
+
+.width-sidebar { 
+    width: 280px;
+}
+
+.width-circle {
+    width: 62px;
+}
+
+.bg-dark {
+    background-color: #05326D!important;
+}
+
+.fs-4 {
+    margin: 17px 21px 0;
+    font-size: 21px;
+}
+
+.link-right {
+    margin: 8px 5px 0;
+}
+
+.img-color {
+    background-color: red;
+}
+
+
+

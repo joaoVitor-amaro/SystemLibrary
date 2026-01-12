@@ -1,0 +1,36 @@
+.layout {
+    display: flex;
+    height: 100vh;
+}
+
+.right-panel {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 100%;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+    background: #ffffff;
+}
+
+.page-title, .title-contato {
+    font-size: 1.6em;
+    padding-bottom: 0;
+    color: rgba(0, 0, 0, 0.363);
+}
+
+.title-contato {
+    font-size: 1.3rem;
+}
+
+.linha-secao {
+    background-color: #000000;
+    height: 1px;
+    border: none;
+}
+
+
+

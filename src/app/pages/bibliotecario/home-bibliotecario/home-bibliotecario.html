@@ -1,1 +1,37 @@
-<p>home-bibliotecario works!</p>
+<div class="layout">
+    <!---SideBar-->
+    <div id="sidebar">
+        <app-sidebar></app-sidebar>
+    </div>
+    <div class="right-panel">
+        <div id="header">
+            <app-header></app-header>
+        </div>
+        <div id="toast" class="toast hidden"></div>
+        <main class="content">
+            <h2 class="page-title">Empréstimos</h2>
+            <section>
+                <table class="table table-bordered">
+                    <thead class="thead-dark">
+                    <tr style="text-align: center;">
+                        <th scope="col">Aluno</th>
+                        <th scope="col">Matrícula</th>
+                        <th scope="col">Livro</th>
+                        <th scope="col">Prazo</th> 
+                        <th scope="col">Situação</th>          
+                    </tr>
+                    </thead>
+                    <tbody style="text-align: center;">
+                        <tr>
+                            <td>João Vitor</td>
+                            <td>20230047337</td> 
+                            <td>Harry Potter a camera secreta</td> 
+                            <td>12:10:2026</td> 
+                            <td>Emprestado</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+</div>

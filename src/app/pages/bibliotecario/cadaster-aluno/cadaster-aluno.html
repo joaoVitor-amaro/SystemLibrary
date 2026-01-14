@@ -1,0 +1,95 @@
+<div class="layout">
+  <!-- SIDEBAR -->
+  <div id="sidebar">
+    <app-sidebar></app-sidebar>
+  </div>
+
+  <div class="right-panel">
+    <!-- HEADER -->
+    <div id="header">
+      <app-header></app-header>
+    </div>
+
+    <div id="toast" class="toast hidden" [class.hidden]="!showToast" [class.success]="toastType === 'success'" [class.error]="toastType === 'error'">
+      {{toastMessage}}
+    </div>
+
+    <!-- CONTEÚDO -->
+    <main class="content">
+      <section>
+        <h1 class="page-title">
+          <strong>Cadastrar Aluno</strong>
+        </h1>
+        <form #form="ngForm" (ngSubmit)="cadastrar(form)" novalidate style="padding-top: 7px;">
+          <div class="form-row">
+            <div>
+              <label for="nome">
+                <strong>Nome:<span class="required">*</span></strong>
+              </label>
+              <input type="text" id="nome" name="nome" class="form-input" required ngModel #nome="ngModel"/>
+              <div style="margin-left: 65px;" class="invalid-feedback" *ngIf="nome.invalid && form.submitted">
+                Informe o nome.
+              </div>
+            </div>
+
+            <div>
+              <label for="matricula">
+                <strong>Matrícula:<span class="required">*</span></strong>
+              </label>
+              <input type="text" id="matricula" name="matricula" class="form-input" required ngModel #matricula="ngModel"/>
+              <div style="margin-left: 84px;" class="invalid-feedback" *ngIf="matricula.invalid && form.submitted">
+                Informe a matrícula.
+              </div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div>
+              <label for="email">
+                <strong>E-mail:<span class="required">*</span></strong>
+              </label>
+              <input type="email" id="email" name="email" class="form-input" required ngModel #email="ngModel"/>
+              <div style="margin-left: 67px;" class="invalid-feedback" *ngIf="email.invalid && form.submitted">
+                Informe o e-mail.
+              </div>
+            </div>
+            <div>
+              <label for="turma">
+                <strong>Turma:<span class="required">*</span></strong>
+              </label>
+
+              <select id="turma" name="turma" class="form-input" required ngModel #turma="ngModel" style="width: 100px;">
+                <option value="" disabled selected>Selecione</option>
+                <option value="6º Ano">6º Ano</option>
+                <option value="7º Ano">7º Ano</option>
+                <option value="8º Ano">8º Ano</option>
+                <option value="9º Ano">9º Ano</option>
+                <option value="1º Ano">1º Ano</option>
+                <option value="2º Ano">2º Ano</option>
+                <option value="3º Ano">3º Ano</option>
+              </select>
+              <div style="margin-left: 82px;" class="invalid-feedback" *ngIf="email.invalid && form.submitted">
+                Informe o turma.
+              </div>
+            </div>
+          </div>
+          <hr class="linha-secao" />
+          <!-- CONTATO -->
+          <h1 class="title-contato">
+            <strong>Contato</strong>
+          </h1>
+          <label for="telefone">
+            <strong>Telefone:<span class="required">*</span></strong>
+          </label>
+          <input type="tel" id="telefone" name="telefone" class="form-input" required ngModel #telefone="ngModel"/>
+          <div style="margin-left: 80px;" class="invalid-feedback" *ngIf="telefone.invalid && form.submitted">
+            Informe o telefone.
+          </div>
+          <hr class="linha-secao" />
+          <div class="conteiner-button">
+            <button type="submit" class="btn btn-outline-primary">Cadastrar</button>
+          </div>
+        </form>
+      </section>
+    </main>
+  </div>
+</div>

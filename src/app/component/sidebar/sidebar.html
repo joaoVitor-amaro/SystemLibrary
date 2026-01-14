@@ -9,10 +9,10 @@
     <nav class="mb-auto">
         <ul class="nav nav-pills flex-column">
             <li>
-                <a routerLink="/home-bibliotecario"
-                   (click)="setActive(0)"
-                   [class.active]="activeIndex === 0"
-                   class="nav-link text-white">
+                     <a routerLink="/home-bibliotecario"
+                         routerLinkActive="active"
+                         [routerLinkActiveOptions]="{ exact: true }"
+                         class="nav-link text-white">
                     Circulação
                 </a>
             </li>
@@ -22,7 +22,10 @@
                 </a>
             </li>
             <li>
-                <a href="#" class="nav-link text-white" >   
+                <a routerLink="/cadaster-aluno"
+                   routerLinkActive="active"
+                   [routerLinkActiveOptions]="{ exact: true }"
+                   class="nav-link text-white" >   
                     Cadastrar Aluno
                 </a>
             </li>

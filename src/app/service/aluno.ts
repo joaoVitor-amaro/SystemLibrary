@@ -10,7 +10,7 @@ import { AlunoCadastroResponse } from '../models/aluno-cadastro-response';
 export class AlunoService {
   private urlApi: string = 'http://localhost:8080/bibliotecario/cadastrarAluno';
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
   
   cadastrar(aluno: Aluno): Observable<AlunoCadastroResponse> {
     return this.http.post<AlunoCadastroResponse>(this.urlApi, aluno);

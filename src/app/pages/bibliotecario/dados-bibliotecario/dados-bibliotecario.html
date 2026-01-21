@@ -1,0 +1,43 @@
+<div class="layout">
+    <div id="sidebar">
+        <app-sidebar></app-sidebar>
+    </div>
+    <div class="right-panel">
+        <div id="header">
+            <app-header></app-header>
+        </div>
+        <main class="content">
+            <h2 class="page-title">Meus Dados</h2>
+            <section>
+                <div class="form-row">
+                    <div>
+                        <label for="nome">
+                            <strong>Nome:</strong>
+                        </label>
+                        <input type="text" id="nome" name="nome" class="form-input" value="{{bibliotecario?.nome}}" disabled/>
+                    </div>
+                    <div>
+                        <label for="matricula">
+                            <strong>Matrícula:</strong>
+                        </label>
+                        <input type="text" id="matricula" name="matricula" class="form-input" value="{{bibliotecario?.matricula}}" disabled/>
+                    </div>
+                </div>
+                <div style="margin-top: 25px; margin-left: 0px;">
+                    <label for="email">
+                        <strong>E-mail:</strong>
+                    </label>
+                    <input type="text" id="email" name="nome" class="form-input" value="{{bibliotecario?.email}}" disabled style="width: 280px;"/>
+                </div>
+                <hr class="linha-secao">
+                <h1 class="title-contato">Contato</h1>
+                <div style="margin-top: 20px; margin-left: 0px;">
+                    <label for="email">
+                        <strong>Telefone:</strong>
+                    </label>
+                    <input type="text" id="email" name="nome" class="form-input" value="{{bibliotecario?.telefone}}" disabled/>
+                </div>
+            </section>
+        </main>
+    </div>
+</div>

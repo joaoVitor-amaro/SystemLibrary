@@ -3,9 +3,9 @@ import { Sidebar } from "../../../component/sidebar/sidebar";
 import { Header } from "../../../component/header/header";
 import { FormsModule, NgForm } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { Aluno } from '../../../models/aluno';
 import { AlunoService } from '../../../service/aluno';
-import { Router } from '@angular/router';
+import { AlunoResponse } from '../../../models/aluno-response';
+import { AlunoRequest } from '../../../models/aluno-request';
 
 @Component({
   selector: 'app-cadaster-aluno',
@@ -19,12 +19,12 @@ export class CadasterAluno {
   toastType: 'success' | 'error' | '' = '';
   showToast = false;
 
-  private aluno: Aluno = {
+  private aluno: AlunoRequest = {
     matricula: 0,
     nome: "",
     email: '',
-    turma: '',
-    telefone: ''
+    telefone: '',
+    turma: ''
   }
 
   constructor(private alunoService: AlunoService) {}
@@ -47,8 +47,8 @@ export class CadasterAluno {
       matricula: Number(form.value.matricula),
       nome: form.value.nome,
       email: form.value.email,
-      turma: form.value.turma,
-      telefone: form.value.telefone
+      telefone: form.value.telefone,
+      turma: form.value.turma
     };
     this.alunoService.cadastrar(this.aluno).subscribe({
       next: (resp) => {

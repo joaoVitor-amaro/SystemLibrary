@@ -9,7 +9,7 @@ import { CadastroBibliotecario } from './pages/admin/cadastro-bibliotecario/cada
 export const routes: Routes = [
     {path: '', component: Login},
     {path: 'home-bibliotecario', component: HomeBibliotecario, canActivate: [AuthGuard]},
-    {path: 'cadaster-aluno', component: CadasterAluno, canActivate: [AuthGuard]},
+    {path: 'cadaster-aluno', component: CadasterAluno},
     {path: 'dados-bibliotecario', component: DadosBibliotecario, canActivate: [AuthGuard]},
     {path: 'cadastro-bibliotecario', component: CadastroBibliotecario}
 ];

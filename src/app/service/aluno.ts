@@ -1,18 +1,19 @@
 import { Injectable } from '@angular/core';
-import { Aluno } from '../models/aluno';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { AlunoCadastroResponse } from '../models/aluno-cadastro-response';
+import { AlunoRequest } from '../models/aluno-request';
+import { ApiResponse } from '../models/api-response';
+import { AlunoResponse } from '../models/aluno-response';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AlunoService {
-  private urlApi: string = 'http://localhost:8080/bibliotecario/cadastrarAluno';
+  private urlApi: string = 'http://localhost:8080/bibliotecario/alunos';
 
   constructor(private http: HttpClient) { }
   
-  cadastrar(aluno: Aluno): Observable<AlunoCadastroResponse> {
-    return this.http.post<AlunoCadastroResponse>(this.urlApi, aluno);
+  cadastrar(aluno: AlunoRequest): Observable<ApiResponse<AlunoResponse>> {
+    return this.http.post<ApiResponse<AlunoResponse>>(this.urlApi, aluno);
   }
 }

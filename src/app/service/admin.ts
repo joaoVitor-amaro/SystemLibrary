@@ -9,7 +9,7 @@ import { BibliotecarioDTO } from '../models/bibliotecario-dto';
   providedIn: 'root',
 })
 export class AdminService {
-  private api: string = 'http://localhost:8080/admin/cadastrarBibliotecario';
+  private api: string = 'http://localhost:8080/admin/bibliotecarios';
 
   constructor(private http: HttpClient) {}
 

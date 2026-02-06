@@ -5,11 +5,13 @@ import { AuthGuard } from './service/auth.guard';
 import { CadasterAluno } from './pages/bibliotecario/cadaster-aluno/cadaster-aluno';
 import { DadosBibliotecario } from './pages/bibliotecario/dados-bibliotecario/dados-bibliotecario';
 import { CadastroBibliotecario } from './pages/admin/cadastro-bibliotecario/cadastro-bibliotecario';
+import { AtivarConta } from './pages/ativar-conta/ativar-conta';
 
 export const routes: Routes = [
     {path: '', component: Login},
     {path: 'home-bibliotecario', component: HomeBibliotecario, canActivate: [AuthGuard]},
     {path: 'cadaster-aluno', component: CadasterAluno},
     {path: 'dados-bibliotecario', component: DadosBibliotecario, canActivate: [AuthGuard]},
-    {path: 'cadastro-bibliotecario', component: CadastroBibliotecario}
+    {path: 'cadastro-bibliotecario', component: CadastroBibliotecario},
+    {path: 'ativar', component: AtivarConta}
 ];

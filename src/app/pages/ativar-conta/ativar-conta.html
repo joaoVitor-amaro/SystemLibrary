@@ -1,0 +1,53 @@
+<app-header></app-header>
+<div class="toast"
+     [class.show]="showToast"
+     [class.success]="toastType === 'success'"
+     [class.error]="toastType === 'error'">
+  {{ toastMessage }}
+</div>
+
+<main class="content">
+    <section>
+    <h1 class="page-title">
+        <strong>Ativar Usuário</strong>
+    </h1>
+    <form #form="ngForm" (ngSubmit)="ativarConta(form)" novalidate style="padding-top: 7px;">
+        <div class="form-row">
+            <div>
+                <label for="login">
+                <strong>Login:<span class="required">*</span></strong>
+                </label>
+                <input type="text" id="login" name="login" class="form-input" required ngModel #login="ngModel"/>
+                <div style="margin-left: 65px;" class="invalid-feedback" *ngIf="login.invalid && form.submitted">
+                Informe seu login.
+                </div>
+            </div>
+        </div>
+        <div class="form-row">
+            <div>
+                <label for="senha">
+                <strong>Senha:<span class="required">*</span></strong>
+                </label>
+                <input type="password" id="senha" name="senha" class="form-input" minlength="8" required ngModel #senha="ngModel"/>
+                <div style="margin-left: 67px;" class="invalid-feedback"  *ngIf="senha.invalid && form.submitted">
+                Informe sua senha.
+                </div>
+            </div>
+        </div>
+        <div class="form-row">
+            <div>
+                <label for="confirmeSenha">
+                <strong>Confirme a senha:<span class="required">*</span></strong>
+                </label>
+                <input type="password" id="confirmeSenha" name="confirmeSenha" class="form-input" minlength="8" required ngModel #confirmeSenha="ngModel" />
+                <div style="margin-left: 67px;" class="invalid-feedback" *ngIf="confirmeSenha.invalid && form.submitted">
+                Informe sua senha.
+                </div>
+            </div>
+        </div>
+        <div class="conteiner-button">
+        <button type="submit" class="btn btn-outline-primary">Cadastrar</button>
+        </div>
+    </form>
+    </section>
+</main>
